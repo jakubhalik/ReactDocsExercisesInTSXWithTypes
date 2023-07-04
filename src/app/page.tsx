@@ -1,5 +1,6 @@
-import './globals.css'; import ToDo from './ToDo'; import PropsToCompExample from './PropsToCompExample';
+import './globals.css'; import Border from './Border'; import Text2xl from './Text2xl'; import P1 from './P1';
+import ToDo from './ToDo'; import PropsToCompExample from './PropsToCompExample'; import ConditionalRenderingExample from './ConditionalRenderingExample';
 export default function App() { return ( <div className="flex justify-center items-center h-screen">
-  <div className="border border-black p-1"><h1 className="text-2xl">ToDo.tsx</h1><ToDo /></div><div className="p-1"></div>
-  <div className="border border-black p-1"><h1 className="text-2xl">PropsToCompExample.tsx</h1><PropsToCompExample /></div>
+  <Border><Text2xl>ToDo.tsx</Text2xl><ToDo /></Border><P1 /><Border><Text2xl>PropsToCompExample.tsx</Text2xl><PropsToCompExample /></Border><P1 />
+  <Border><Text2xl>ConditionalRenderingExample.tsx</Text2xl><ConditionalRenderingExample /></Border><P1 />
 </div>); }

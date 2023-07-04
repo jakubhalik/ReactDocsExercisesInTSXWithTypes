@@ -1,0 +1,1 @@
+export default function P1Props() { return <div className="p-1"></div> }
