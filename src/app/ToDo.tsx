@@ -1,5 +1,3 @@
-interface person { name: string, className: string, todo: ToDo } interface ToDo { first: string, second: string, third: string }
-const person = { name: 'qName', className: 'bg-black', todo: { first: 'wToDo', second: 'eToDo', third: 'rToDo' } }
-export default function ToDoList() { return (
-    <div className={person.className + "text-white"}><h1 className="text-xl">{person.name}</h1><p>{person.todo.first}</p><p>{person.todo.second}</p><p>{person.todo.third}</p></div>
-); }
+interface person { name: string, className: string, todos: ToDo } interface ToDo { first: string, second: string, third: string }
+const people: person = { name: 'qName', className: 'bg-black', todos: { first: 'wToDo', second: 'eToDo', third: 'rToDo' } }
+export default function ToDoList() { return <div className={`${people.className}text-white`}><h1>{people.name}</h1>{Object.keys(people.todos).map((key, index) => (<p key={index}>{people.todos[key as keyof ToDo]}</p>))}</div>; }
