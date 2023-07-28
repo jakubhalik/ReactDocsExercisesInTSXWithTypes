@@ -1,2 +1,2 @@
-import './globals.css'; import Styles from './Styles'; import * as ImportedComponents from './index'; const Components: { [key: string]: React.FC } = ImportedComponents;
-export default function App() { return <div className="py-2 px-4">{Object.entries(Components).map(([name, Component]) => (<Styles key={name} name={name}><Component /></Styles>))}</div>; }
+import './globals.css'; import Styles from './Styles'; import * as Components from './index';
+export default function App() { return <div className="py-2 px-4">{Object.values(Components).map((Component, index) => (<Styles key={index} name={Component.name}><Component /></Styles>))}</div>; }

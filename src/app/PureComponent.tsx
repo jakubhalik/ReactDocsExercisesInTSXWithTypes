@@ -1,2 +1,2 @@
 type Guest = { guest: number}; function Coffee({ guest }: Guest) { return <h2>Coffee for #{guest}</h2> } 
-export default function CoffeeTable() { return <>{Array.from({ length: 3 }, (_, i) => <Coffee key={i + 1} guest={i + 1} /> )}</>; }
+export default function PureComponent() { return <>{Array.from({ length: 3 }, (_, i) => <Coffee key={i + 1} guest={i + 1} /> )}</>; }
