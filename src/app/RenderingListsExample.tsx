@@ -6,4 +6,4 @@ export const people: Person[] = [
 ]
 export default function List() { return <article><h1 className="text-xl">x certain type of people</h1><ul>{people.map(({ id, name, profession, accomplishments, imgId }) => (
     <li key={id}><Image src={`/${imgId}.jpg`} alt={name} width={100} height={100} /><p><b>{name}</b> {profession} known for {accomplishments}</p></li>
-) )}</ul></article>}
+) )}</ul></article>;}

@@ -1,0 +1,2 @@
+type Guest = { guest: number}; function Coffee({ guest }: Guest) { return <h2>Coffee for #{guest}</h2> } 
+export default function CoffeeTable() { return <>{[1, 2, 3].map(guest => (<Coffee key={guest} guest={guest} />))}</>; }

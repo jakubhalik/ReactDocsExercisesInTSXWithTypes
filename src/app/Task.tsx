@@ -1,0 +1,3 @@
+interface person { name: string, className: string, tasks: Task } interface Task { first: string, second: string, third: string }
+const people: person = { name: 'qName', className: 'bg-black', tasks: { first: 'wTask', second: 'eTask', third: 'rTask' } }
+export default function TaskList() { return <div className={`${people.className}text-white`}><h1>{people.name}</h1>{Object.keys(people.tasks).map((key, index) => (<p key={index}>{people.tasks[key as keyof Task]}</p>))}</div>; }
