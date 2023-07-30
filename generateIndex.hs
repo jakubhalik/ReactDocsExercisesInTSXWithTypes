@@ -1,0 +1,2 @@
+main :: IO () main = let c = ["TaskList", "PropsToCompExample", "ConditionalRenderingExample", "RenderingListsExample", "PureComponent"]
+    in writeFile "./src/app/index.ts" $ concat [ "export { default as " ++ x ++ " } from './" ++ x ++ "';" | x <- c ]
