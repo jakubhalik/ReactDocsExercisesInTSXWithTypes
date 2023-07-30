@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "grizzly": "ts-node generateIndex.ts && npm run dev",
+    "pyzzly": "python generateIndex.py && npm run dev",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
