@@ -1,2 +1,2 @@
 const c = ['TaskList', 'PropsToCompExample', 'ConditionalRenderingExample', 'RenderingListsExample', 'PureComponent'];
-require('fs').writeFileSync('./src/app/index.ts', c.map(c => `export {default as ${c} } from './${c}';`).join('\n'));
+require('fs').writeFileSync('./src/app/index.ts', c.map(c => `export {default as ${c} } from './${c}';`).join(''));
