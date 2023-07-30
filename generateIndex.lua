@@ -1,0 +1,2 @@
+local c = {'TaskList', 'PropsToCompExample', 'ConditionalRenderingExample', 'RenderingListsExample', 'PureComponent'}
+io.open('./src/app/index.ts', 'w'):write(table.concat({('export { default as %s } from \'./%s\';'):format(v,v)for _,v in ipairs(c)}, '\n')):close()
