@@ -1,1 +1,1 @@
-open('./src/app/index.ts','w').write(''.join(f'export {{ default as {x} }} from \'./{x}\';' for x in __import__('json').load(open('components.json'))))
+open('./src/app/index.ts','w').write(''.join(f'export {{ default as {x} }} from \'./{x}\';' for x in __import__('json').load(open('./src/app/components.json'))))

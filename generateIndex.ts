@@ -1,1 +1,2 @@
-const {readFileSync: r, writeFileSync: w } = require('fs'); const c: string[] = JSON.parse(r('./components.json', 'utf8')); w('./src/app/index.ts', c.map(c => `export {default as ${c} } from './${c}';`).join(''));
+const {readFileSync: r, writeFileSync: w } = require('fs'); const c: string[] = JSON.parse(r('./src/app/components.json', 'utf8')); 
+w('./src/app/index.ts', c.map(c => `export {default as ${c} } from './${c}';`).join(''));
