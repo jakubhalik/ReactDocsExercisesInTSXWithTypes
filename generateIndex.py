@@ -1,2 +1,1 @@
-open('./src/app/index.ts', 'w').write(''.join(map(lambda x:f'export {{ default as {x} }} from \'./{x}\';',
-    ['TaskList', 'PropsToCompExample', 'ConditionalRenderingExample', 'RenderingListsExample', 'PureComponent'])))
+open('./src/app/index.ts','w').write(''.join(f'export {{ default as {x} }} from \'./{x}\';' for x in __import__('json').load(open('components.json'))))
