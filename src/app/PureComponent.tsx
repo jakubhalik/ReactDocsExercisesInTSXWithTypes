@@ -1,2 +1,2 @@
-type Guest = { guest: number}; function Coffee({ guest }: Guest) { return <h2>Coffee for #{guest}</h2> } 
+type Guest = { guest: number}; function Coffee({ guest }: Guest) { return <p>Coffee for #{guest}</p> } 
 export default function PureComponent() { return <>{Array.from({ length: 3 }, (_, i) => <Coffee key={i + 1} guest={i + 1} /> )}</>; }
